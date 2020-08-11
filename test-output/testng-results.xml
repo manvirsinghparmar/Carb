@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="6" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="70457" started-at="2020-08-11T08:23:22Z" finished-at="2020-08-11T08:24:33Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="70457" started-at="2020-08-11T08:23:22Z" finished-at="2020-08-11T08:24:33Z">
+      <class name="com.carbonite.qa.tests.SignUpPageTest">
+        <test-method status="PASS" signature="loggersetUp()[pri:0, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="loggersetUp" is-config="true" duration-ms="67" started-at="2020-08-11T08:23:22Z" finished-at="2020-08-11T08:23:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loggersetUp -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="setUp" is-config="true" duration-ms="16326" started-at="2020-08-11T08:23:23Z" finished-at="2020-08-11T08:23:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="fillSignUpFormWithValidTestData(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="fillSignUpFormWithValidTestData" duration-ms="9067" started-at="2020-08-11T08:23:39Z" data-provider="PositiveSignUpDataFromExcelFile" finished-at="2020-08-11T08:23:49Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[manvir_singh1@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[manvir_singh1@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Manager@123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Manager@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillSignUpFormWithValidTestData -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="tearDown" is-config="true" duration-ms="665" started-at="2020-08-11T08:23:49Z" finished-at="2020-08-11T08:23:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="setUp" is-config="true" duration-ms="7701" started-at="2020-08-11T08:23:49Z" finished-at="2020-08-11T08:23:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="fillSignUpFormWithValidTestData(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="fillSignUpFormWithValidTestData" duration-ms="4094" started-at="2020-08-11T08:23:57Z" data-provider="PositiveSignUpDataFromExcelFile" finished-at="2020-08-11T08:24:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[manvir_singh12@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[manvir_singh12@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Manager@123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Manager@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillSignUpFormWithValidTestData -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="tearDown" is-config="true" duration-ms="724" started-at="2020-08-11T08:24:01Z" finished-at="2020-08-11T08:24:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="setUp" is-config="true" duration-ms="7575" started-at="2020-08-11T08:24:02Z" finished-at="2020-08-11T08:24:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="fillSignUpFormWithValidTestData(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:1, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="fillSignUpFormWithValidTestData" duration-ms="3874" started-at="2020-08-11T08:24:09Z" data-provider="PositiveSignUpDataFromExcelFile" finished-at="2020-08-11T08:24:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[manvir_singh123@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[manvir_singh123@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Manager@123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Manager@123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillSignUpFormWithValidTestData -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="tearDown" is-config="true" duration-ms="1193" started-at="2020-08-11T08:24:13Z" finished-at="2020-08-11T08:24:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="setUp" is-config="true" duration-ms="7335" started-at="2020-08-11T08:24:14Z" finished-at="2020-08-11T08:24:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="fillSignUpFormWithNegativeTestData(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="fillSignUpFormWithNegativeTestData" duration-ms="1024" started-at="2020-08-11T08:24:22Z" data-provider="NegativeSignUpDataFromExcelFile" finished-at="2020-08-11T08:24:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[manvir456@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[manvir123@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[password@1234]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[password@1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillSignUpFormWithNegativeTestData -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="tearDown" is-config="true" duration-ms="790" started-at="2020-08-11T08:24:23Z" finished-at="2020-08-11T08:24:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="setUp" is-config="true" duration-ms="7498" started-at="2020-08-11T08:24:24Z" finished-at="2020-08-11T08:24:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="fillSignUpFormWithNegativeTestData(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:2, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="fillSignUpFormWithNegativeTestData" duration-ms="942" started-at="2020-08-11T08:24:31Z" data-provider="NegativeSignUpDataFromExcelFile" finished-at="2020-08-11T08:24:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[manvir456@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[manvir456@gmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[password@123]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[password@1234]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillSignUpFormWithNegativeTestData -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.carbonite.qa.tests.SignUpPageTest@657c8ad9]" name="tearDown" is-config="true" duration-ms="715" started-at="2020-08-11T08:24:32Z" finished-at="2020-08-11T08:24:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.carbonite.qa.tests.SignUpPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
