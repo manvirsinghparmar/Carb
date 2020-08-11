@@ -7,13 +7,15 @@ import org.testng.ITestResult;
 import com.carbonite.qa.base.TestBase;
 
 //This class is part of logic that Rerun the Failed Test cases
-public class RetryFailedTest implements IRetryAnalyzer {
+public class RetryFailedTest extends TestBase implements IRetryAnalyzer {
 
 	int counter = 0;
-	int maxRetry = 3;
+	int maxRetry = 2;
 
 	@Override
 	public boolean retry(ITestResult result) {
+
+		logger.info("Retrying Failed Test Case");
 
 		if (counter < maxRetry) {
 

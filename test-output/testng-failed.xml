@@ -5,7 +5,6 @@
     <classes>
       <class name="com.carbonite.qa.tests.SignUpPageTest">
         <methods>
-          <include name="fillSignUpFormWithValidTestData"/>
           <include name="loggersetUp"/>
           <include name="fillSignUpFormWithNegativeTestData"/>
           <include name="tearDown"/>

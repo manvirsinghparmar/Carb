@@ -50,7 +50,7 @@ public class SignUpPageTest extends TestBase {
 	}
 
 	// Run data driven testing for filling Sign up form using InValid data from
-	// Excel sheet
+	// Excel sheet 
 	@Test(priority = 2, dataProvider = "NegativeSignUpDataFromExcelFile")
 	public void fillSignUpFormWithNegativeTestData(String email, String ConfirmEmail, String password,
 			String confirmPassword) {
@@ -74,7 +74,8 @@ public class SignUpPageTest extends TestBase {
 
 	}
 
-	@Test(enabled = false)
+	//This test case been added to demonstrate the re-run of failed test case
+	@Test(priority = 3)
 	void test() {
 		Assert.assertEquals(false, true);
 	}
