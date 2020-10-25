@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 11, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 114.368 s <<< FAILURE! - in TestSuite
+test1(com.carbonite.qa.tests.AllProductsPageTest)  Time elapsed: 0.021 s  <<< FAILURE!
+java.lang.AssertionError: expected [false] but found [true]
+	at com.carbonite.qa.tests.AllProductsPageTest.test1(AllProductsPageTest.java:33)
+
+getTitleOfThePage(com.carbonite.qa.tests.BuisnessSolutionPageTest)  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.AssertionError: expected [Small business cloud backup for your business data | Carbonite] but found []
+	at com.carbonite.qa.tests.BuisnessSolutionPageTest.getTitleOfThePage(BuisnessSolutionPageTest.java:34)
+
+getTitleOfThePage(com.carbonite.qa.tests.CompareBackUpPlanTest)  Time elapsed: 0.277 s  <<< FAILURE!
+java.lang.AssertionError: expected [Personal Cloud Backup Pricing, Plans & Features | Carbonite] but found [Backup Product Select | Carbonite]
+	at com.carbonite.qa.tests.CompareBackUpPlanTest.getTitleOfThePage(CompareBackUpPlanTest.java:36)
+
+fillSignUpFormWithValidTestData(com.carbonite.qa.tests.SignUpPageTest)  Time elapsed: 1.808 s  <<< FAILURE!
+java.lang.AssertionError: expected [Download] but found [Try Carbonite Computer Backup Free For 15 Days | Carbonite]
+	at com.carbonite.qa.tests.SignUpPageTest.fillSignUpFormWithValidTestData(SignUpPageTest.java:64)
+
+fillSignUpFormWithValidTestData(com.carbonite.qa.tests.SignUpPageTest)  Time elapsed: 1.72 s  <<< FAILURE!
+java.lang.AssertionError: expected [Download] but found [Try Carbonite Computer Backup Free For 15 Days | Carbonite]
+	at com.carbonite.qa.tests.SignUpPageTest.fillSignUpFormWithValidTestData(SignUpPageTest.java:64)
+
+fillSignUpFormWithValidTestData(com.carbonite.qa.tests.SignUpPageTest)  Time elapsed: 1.545 s  <<< FAILURE!
+java.lang.AssertionError: expected [Download] but found [Try Carbonite Computer Backup Free For 15 Days | Carbonite]
+	at com.carbonite.qa.tests.SignUpPageTest.fillSignUpFormWithValidTestData(SignUpPageTest.java:64)
+
+test(com.carbonite.qa.tests.SignUpPageTest)  Time elapsed: 0 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at com.carbonite.qa.tests.SignUpPageTest.test(SignUpPageTest.java:100)
+

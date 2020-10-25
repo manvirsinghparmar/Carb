@@ -24,95 +24,90 @@ import org.testng.annotations.BeforeClass;
 import com.carbonite.qa.utils.Utils;
 import com.carbonite.qa.utils.WebEventsListener;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
-	
 
+	//Base Class
+	public static WebDriver driver;
+	public static Properties prop;
+	public static Logger logger;
+	public static EventFiringWebDriver e_driver;
+	public static WebEventsListener eventlistner;
 
-		public static WebDriver driver;
-		public static Properties prop;
-		public static Logger logger;
-		public static EventFiringWebDriver e_driver;
-		public static WebEventsListener eventlistner;
+	public TestBase() {
 
-		public TestBase() {
+		prop = new Properties();
 
-			prop = new Properties();
+		FileInputStream file;
+		try {
+			file = new FileInputStream("./src\\main\\java\\com\\carbonite\\qa\\config\\config.properties");
 
-			FileInputStream file;
-			try {
-				file = new FileInputStream("./src\\main\\java\\com\\carbonite\\qa\\config\\config.properties");
+			prop.load(file);
+		} catch (IOException e) {
 
-				prop.load(file);
-			} catch (IOException e) {
-
-				e.printStackTrace();
-			}
-
+			e.printStackTrace();
 		}
 
-		@BeforeClass
-		public void loggersetUp() {
+	}
 
-			logger = Logger.getLogger(TestBase.class);
-			PropertyConfigurator.configure("log4j.properties");
-			BasicConfigurator.configure();
+	@BeforeClass
+	public void loggersetUp() {
 
-			logger.setLevel(Level.INFO);
+		logger = Logger.getLogger(TestBase.class);
+		PropertyConfigurator.configure("log4j.properties");
+		BasicConfigurator.configure();
 
+		logger.setLevel(Level.INFO);
+
+	}
+
+	public static void failedTestScreenShot(String testMethodName) {
+
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+
+		File screenShotFfile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		try {
+			FileUtils.copyFile(screenShotFfile,
+					new File("./FailedTestCasesScreenShot\\" + "_" + testMethodName + "_" + timeStamp + ".jpg"));
+		} catch (IOException e) {
+
+			System.out.println("................................The IO Exception is ...... " + e);
+			e.printStackTrace();
 		}
 
-		public static void failedTestScreenShot(String testMethodName) {
+	}
 
-			String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+	public void initialisation() {
 
-			File screenShotFfile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		String browserName = prop.getProperty("browser");
+		if (browserName.equalsIgnoreCase("chrome")) {
 
-			try {
-				FileUtils.copyFile(screenShotFfile,
-						new File("./FailedTestCasesScreenShot\\" + "_" + testMethodName + "_" + timeStamp + ".jpg"));
-			} catch (IOException e) {
+			WebDriverManager.chromedriver().setup();
+			driver = new ChromeDriver();
+		} else if (browserName.equalsIgnoreCase("Firefox")) {
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
 
-				System.out.println("................................The IO Exception is ...... " + e);
-				e.printStackTrace();
-			}
-
+		} else {
+			System.out.println("Broswer Not Avalaible");
 		}
 
-		public void initialisation() {
+		e_driver = new EventFiringWebDriver(driver);
 
-			String browsername = prop.getProperty("browser");
+		eventlistner = new WebEventsListener();
+		e_driver.register(eventlistner);
 
-			if (browsername.equalsIgnoreCase("chrome")) {
+		driver = e_driver;
 
-				System.setProperty(prop.getProperty("Chrome_System_Property"), prop.getProperty("Chrome_Driver_Path"));
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().pageLoadTimeout(Utils.PAGE_LOADOUT_WAIT, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Utils.IMPLICIT_WAIT, TimeUnit.SECONDS);
 
-				driver = new ChromeDriver();
-
-			}
-
-			else if (browsername.equalsIgnoreCase("firefox")) {
-
-				System.setProperty(prop.getProperty("Firefox_System_Property"), prop.getProperty("Firefox_Driver_Path"));
-
-				driver = new FirefoxDriver();
-			}
-
-			e_driver = new EventFiringWebDriver(driver);
-
-			eventlistner = new WebEventsListener();
-			e_driver.register(eventlistner);
-
-			driver = e_driver;
-
-			driver.manage().window().maximize();
-			driver.manage().deleteAllCookies();
-			driver.manage().timeouts().pageLoadTimeout(Utils.PAGE_LOADOUT_WAIT, TimeUnit.SECONDS);
-			driver.manage().timeouts().implicitlyWait(Utils.IMPLICIT_WAIT, TimeUnit.SECONDS);
-			
-			logger.info("=====Application Started=====");
-			driver.get(prop.getProperty("url"));
-		}
-
+		logger.info("=====Application Started=====");
+		driver.get(prop.getProperty("url"));
+	}
 
 }

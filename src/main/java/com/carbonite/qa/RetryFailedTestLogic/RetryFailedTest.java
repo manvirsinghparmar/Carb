@@ -10,7 +10,7 @@ import com.carbonite.qa.base.TestBase;
 public class RetryFailedTest extends TestBase implements IRetryAnalyzer {
 
 	int counter = 0;
-	int maxRetry = 2;
+	int maxRetry = 1;
 
 	@Override
 	public boolean retry(ITestResult result) {

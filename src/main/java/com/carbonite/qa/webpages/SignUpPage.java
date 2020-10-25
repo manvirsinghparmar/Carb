@@ -2,12 +2,10 @@ package com.carbonite.qa.webpages;
 
 import java.util.List;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -50,16 +48,15 @@ public class SignUpPage extends TestBase {
 	@FindBy(xpath = "//input[@type='submit']")
 	@CacheLookup
 	WebElement submitButton;
-	
+
 	@FindBy(xpath = "//span[contains(text(),'Email must match confirm email')]")
 	public WebElement emailNotMatchingAlert;
-	
-	@FindBy(xpath="//span[contains(text(),'The confirm password confirmation does not match.')]")
-	public WebElement passwordNotMatchingAlert;
-	
-	@FindBy(xpath="//button[@class='circle']")
-	public WebElement closeCookieDialogBox;
 
+	@FindBy(xpath = "//span[contains(text(),'The confirm password confirmation does not match.')]")
+	public WebElement passwordNotMatchingAlert;
+
+	@FindBy(xpath = "//button[@class='circle']")
+	public WebElement closeCookieDialogBox;
 
 	public BuisnessSolutionPage ClickOnBuisnessSolutionPage() {
 
@@ -79,14 +76,14 @@ public class SignUpPage extends TestBase {
 
 	public FreeTrialPage ClickOnFreeTrialPlanPage() {
 
-		webPageList.get(3).click();
+		webPageList.get(4).click();
 
 		return new FreeTrialPage(); // Return the object of the Landing Page -> Free Trial
 	}
 
 	public AllProductsPage ClickOnAllProductsPage() {
 
-		webPageList.get(4).click();
+		webPageList.get(3).click();
 
 		return new AllProductsPage(); // Return the object of the Landing Page -> All Product
 	}
@@ -112,18 +109,18 @@ public class SignUpPage extends TestBase {
 	}
 
 	public DownloadPage clickOnSubmitButton() {
-		
+
 		submitButton.submit();
 
 		return new DownloadPage();
 	}
-	
+
 	public void clickCookieDialogBoxCloseButton() {
-		
-		WebDriverWait wait=new WebDriverWait(driver,15);
-		
+
+		WebDriverWait wait = new WebDriverWait(driver, 15);
+
 		wait.until(ExpectedConditions.visibilityOf(closeCookieDialogBox));
-		
+
 		closeCookieDialogBox.click();
 	}
 

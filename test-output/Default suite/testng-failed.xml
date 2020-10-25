@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.carbonite.qa.tests.SignUpPageTest">
+      <class name="com.carbonite.qa.tests.AllProductsPageTest">
         <methods>
-          <include name="loggersetUp"/>
-          <include name="fillSignUpFormWithNegativeTestData"/>
+          <include name="test1"/>
           <include name="tearDown"/>
+          <include name="loggersetUp"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.carbonite.qa.tests.SignUpPageTest -->
+      </class> <!-- com.carbonite.qa.tests.AllProductsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

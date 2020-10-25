@@ -36,6 +36,8 @@ public class ExcelUtils extends TestBase {
 		wb.close();
 
 		fi.close();
+		
+		System.out.println("Row count is : " + rowCount);
 
 		return rowCount;
 
@@ -58,6 +60,8 @@ public class ExcelUtils extends TestBase {
 		wb.close();
 
 		fi.close();
+		
+		System.out.println("Column count is  : " + colCount);
 
 		return colCount;
 
@@ -75,6 +79,8 @@ public class ExcelUtils extends TestBase {
 		ws = wb.getSheet(xSheet);
 
 		row = ws.getRow(rowno);
+		
+		
 		cell = row.getCell(colno);
 
 		cell.setCellType(cell.CELL_TYPE_STRING);

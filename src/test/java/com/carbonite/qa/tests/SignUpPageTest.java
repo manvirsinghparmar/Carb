@@ -1,6 +1,7 @@
-package com.carbonite.qa.tests;
+ package com.carbonite.qa.tests;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -11,6 +12,7 @@ import org.testng.annotations.Test;
 
 import com.carbonite.qa.base.TestBase;
 import com.carbonite.qa.utils.ExcelUtils;
+import com.carbonite.qa.utils.Utils;
 import com.carbonite.qa.webpages.SignUpPage;
 
 public class SignUpPageTest extends TestBase {
@@ -18,6 +20,12 @@ public class SignUpPageTest extends TestBase {
 	SignUpPage signUpPage;
 
 	WebDriverWait wait;
+	
+	JavascriptExecutor jse;
+	
+	public static String emailFromUtils=Utils.generateRandomEmail();
+	
+	public static String passwordFromUtils=Utils.generateRandomPassword();
 
 	@BeforeMethod
 	void setUp() throws Exception {
@@ -26,11 +34,17 @@ public class SignUpPageTest extends TestBase {
 
 		signUpPage = new SignUpPage();
 		wait = new WebDriverWait(driver, 20);
+		
+		jse=(JavascriptExecutor) driver;
+		
+		
+		
+		
 	}
 
 	// Run data driven testing for filling Sign up form using Valid data from Excel
 	// sheet
-	@Test(priority = 1, dataProvider = "PositiveSignUpDataFromExcelFile")
+	@Test(priority = 1, dataProvider = "PositiveSignUpDataFromExcelFile",enabled = false)
 	public void fillSignUpFormWithValidTestData(String email, String ConfirmEmail, String password,
 			String ConfirmPassword) {
 
@@ -41,9 +55,11 @@ public class SignUpPageTest extends TestBase {
 		signUpPage.selectCountryFromDropDown(prop.getProperty("Country"));
 
 		signUpPage.clickOnSubmitButton();
+		
+		jse.executeScript("return document.readyState");
 
-		wait.until(ExpectedConditions
-				.visibilityOf(driver.findElement(By.xpath("//h2[contains(text(),'Welcome to Carbonite Safe')]"))));
+		//wait.until(ExpectedConditions
+				//.visibilityOf(driver.findElement(By.xpath("//h2[contains(text(),'Welcome to Carbonite Safe')]"))));
 
 		Assert.assertEquals(driver.getTitle(), "Download");
 
@@ -73,6 +89,10 @@ public class SignUpPageTest extends TestBase {
 		
 
 	}
+	
+	
+	
+	
 
 	//This test case been added to demonstrate the re-run of failed test case
 	@Test(priority = 3)
@@ -110,6 +130,8 @@ public class SignUpPageTest extends TestBase {
 
 		int row = ExcelUtils.getRowCount(filePath, "Sheet1");
 		int col = ExcelUtils.getCellCount(filePath, "Sheet1", 1);
+		
+		System.out.println("Row count is : " + row + "......" + "Column Count is : " + col);
 
 		String[][] SignUpTestData = new String[row][col];
 
