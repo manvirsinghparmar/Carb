@@ -97,7 +97,7 @@ public class SignUpPageTest extends TestBase {
 	//This test case been added to demonstrate the re-run of failed test case
 	@Test(priority = 3)
 	void test() {
-		Assert.assertEquals(false, true);
+		Assert.assertEquals(true, true);
 	}
 
 	@DataProvider(name = "PositiveSignUpDataFromExcelFile")

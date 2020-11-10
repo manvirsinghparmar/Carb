@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.carbonite.qa.extentReportListener.ExtentReportListener"/>
+    <listener class-name="com.carbonite.qa.RetryFailedTestLogic.TransformerForRetry"/>
+    <listener class-name="com.carbonite.qa.utils.CustomListener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.carbonite.qa.tests.AllProductsPageTest">
+      <class name="com.carbonite.qa.tests.CompareBackUpPlanTest">
         <methods>
-          <include name="test1"/>
-          <include name="tearDown"/>
-          <include name="loggersetUp"/>
+          <include name="getTitleOfThePage"/>
           <include name="setUp"/>
+          <include name="loggersetUp"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.carbonite.qa.tests.AllProductsPageTest -->
+      </class> <!-- com.carbonite.qa.tests.CompareBackUpPlanTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

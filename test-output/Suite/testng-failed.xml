@@ -8,15 +8,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.carbonite.qa.tests.SignUpPageTest">
+      <class name="com.carbonite.qa.tests.CompareBackUpPlanTest">
         <methods>
-          <include name="test"/>
-          <include name="fillSignUpFormWithValidTestData" invocation-numbers="0 0 0 1 1 2 2"/>
+          <include name="getTitleOfThePage"/>
+          <include name="setUp"/>
           <include name="loggersetUp"/>
           <include name="tearDown"/>
-          <include name="setUp"/>
         </methods>
-      </class> <!-- com.carbonite.qa.tests.SignUpPageTest -->
+      </class> <!-- com.carbonite.qa.tests.CompareBackUpPlanTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
