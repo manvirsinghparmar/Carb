@@ -41,7 +41,7 @@ public class TestBase {
 
 		FileInputStream file;
 		try {
-			file = new FileInputStream("./src\\main\\java\\com\\carbonite\\qa\\config\\config.properties");
+			file = new FileInputStream("./src\\main\\java\\com\\carbonite\\qa\\config\\conf.properties");
 
 			prop.load(file);
 		} catch (IOException e) {
