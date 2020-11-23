@@ -28,7 +28,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 
-	//Base Class
+	//Base Class added
 	public static WebDriver driver;
 	public static Properties prop;
 	public static Logger logger;

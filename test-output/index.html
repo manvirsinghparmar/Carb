@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-skipped">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\Owner\eclipse-workspace\carbonite_QA\testng.xml</span>
+                    <span>C:\Users\Owner\git\Carbonite_QA_Test\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,  1 skipped,  4 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.carbonite.qa.tests.CompareBackUpPlanTest" hash-for-method="getTitleOfThePage">getTitleOfThePage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">6 methods,  1 skipped,  5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title skipped">Skipped methods</span>
@@ -140,6 +126,11 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.carbonite.qa.tests.CompareBackUpPlanTest" hash-for-method="getTitleOfThePage">getTitleOfThePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.carbonite.qa.tests.BuisnessSolutionPageTest" hash-for-method="getTitleOfThePage">getTitleOfThePage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -160,25 +151,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.carbonite.qa.tests.CompareBackUpPlanTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="getTitleOfThePage">
-                  </a> <!-- getTitleOfThePage -->
-                  <span class="method-name">getTitleOfThePage</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [Personal Cloud Backup Pricing, Plans &amp; Features | Carbonite] but found [Backup Product Select | Carbonite]
-	at com.carbonite.qa.tests.CompareBackUpPlanTest.getTitleOfThePage(CompareBackUpPlanTest.java:36)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
@@ -202,6 +174,21 @@
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
               <span class="class-name">com.carbonite.qa.tests.BuisnessSolutionPageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="getTitleOfThePage">
+                  </a> <!-- getTitleOfThePage -->
+                  <span class="method-name">getTitleOfThePage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.carbonite.qa.tests.CompareBackUpPlanTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -247,7 +234,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Owner\eclipse-workspace\carbonite_QA\testng.xml</span>
+            <span class="header-content">C:\Users\Owner\git\Carbonite_QA_Test\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -307,23 +294,23 @@ data.addRows(6);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'fillSignUpFormWithNegativeTestData')
 data.setCell(0, 2, 'com.carbonite.qa.tests.SignUpPageTest')
-data.setCell(0, 3, 879);
+data.setCell(0, 3, 1398);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'fillSignUpFormWithNegativeTestData')
 data.setCell(1, 2, 'com.carbonite.qa.tests.SignUpPageTest')
-data.setCell(1, 3, 748);
+data.setCell(1, 3, 1291);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'getTitleOfThePage')
 data.setCell(2, 2, 'com.carbonite.qa.tests.CompareBackUpPlanTest')
-data.setCell(2, 3, 541);
+data.setCell(2, 3, 18);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'getTitleOfThePage')
 data.setCell(3, 2, 'com.carbonite.qa.tests.BuisnessSolutionPageTest')
-data.setCell(3, 3, 538);
+data.setCell(3, 3, 12);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'getTitleOfThePage')
 data.setCell(4, 2, 'com.carbonite.qa.tests.CompareBackUpPlanTest')
-data.setCell(4, 3, 426);
+data.setCell(4, 3, 11);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'test')
 data.setCell(5, 2, 'com.carbonite.qa.tests.SignUpPageTest')
@@ -332,7 +319,7 @@ window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -376,87 +363,85 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">getTitleOfThePage</span>
-                <span class="method-start">9588 ms</span>
+                <span class="method-start">29041 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">10150 ms</span>
+                <span class="method-start">29074 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">10852 ms</span>
+                <span class="method-start">29818 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">getTitleOfThePage</span>
-                <span class="method-start">20005 ms</span>
+                <span class="method-start">46845 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">20801 ms</span>
+                <span class="method-start">46857 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.carbonite.qa.tests.BuisnessSolutionPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">loggersetUp</span>
-                <span class="method-start">21575 ms</span>
+                <span class="method-start">47609 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">21577 ms</span>
+                <span class="method-start">47611 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">getTitleOfThePage</span>
-                <span class="method-start">30691 ms</span>
+                <span class="method-start">64318 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">31231 ms</span>
+                <span class="method-start">64332 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.carbonite.qa.tests.SignUpPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">loggersetUp</span>
-                <span class="method-start">31961 ms</span>
+                <span class="method-start">65117 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">32496 ms</span>
+                <span class="method-start">66043 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">fillSignUpFormWithNegativeTestData(manvir456@gmail.com, manvir123@gmail.com, password@1234, password@1234)</span>
-                <span class="method-start">39888 ms</span>
+                <span class="method-start">73671 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">40770 ms</span>
+                <span class="method-start">75073 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">41499 ms</span>
+                <span class="method-start">75836 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">fillSignUpFormWithNegativeTestData(manvir456@gmail.com, manvir456@gmail.com, password@123, password@1234)</span>
-                <span class="method-start">49179 ms</span>
+                <span class="method-start">83180 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">49928 ms</span>
+                <span class="method-start">84473 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">50617 ms</span>
+                <span class="method-start">85275 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">test</span>
-                <span class="method-start">57960 ms</span>
+                <span class="method-start">102138 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">57963 ms</span>
+                <span class="method-start">102140 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

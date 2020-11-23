@@ -34,7 +34,7 @@ public class AllProductsPageTest extends TestBase {
 	}
 
 	// Verify the title of the page upon navigation
-	@Test(priority = 1, invocationCount = 2)
+	@Test(priority = 1, invocationCount = 1)
 	void learnMoreClickTest() {
 
 		ap.learnMoreClick();
