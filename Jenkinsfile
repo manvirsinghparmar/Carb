@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Cleaning Workspace...'
-                bat "mvn clean"
+                bat "mvn help:effective-settings help:effective-pom -U clean -X -DskipTests -Dbranch=master"
             }
         }
         stage('Test') {
@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                bat "mvn install -X"
+                bat "mvn help:effective-settings help:effective-pom -U deploy -X -DskipTests -Dbranch=master"
             }
         }
     }
