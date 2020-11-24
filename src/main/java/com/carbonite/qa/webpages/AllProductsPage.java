@@ -26,7 +26,7 @@ public class AllProductsPage extends TestBase {
 		String titleOfThePage = driver.getTitle();
 		
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -42,7 +42,7 @@ public class AllProductsPage extends TestBase {
 		learnMoreButton.click();
 		
 		try {
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
