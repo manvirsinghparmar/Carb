@@ -27,12 +27,12 @@ public class CompareBackUpPlanTest extends TestBase {
 
 	}
 
-	//Verify the title of the page upon navigation
+	// Verify the title of the page upon navigation
 	@Test(priority = 1)
 	void getTitleOfThePage() {
 
 		String titleOfThePage = backUpPlan.getTitleOfThePage();
-		
+		System.out.println(titleOfThePage);
 
 		Assert.assertEquals(titleOfThePage, prop.getProperty("Title-CompareBackUpPlan"));
 
