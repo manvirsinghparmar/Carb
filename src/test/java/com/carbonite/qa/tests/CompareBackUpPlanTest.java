@@ -31,6 +31,13 @@ public class CompareBackUpPlanTest extends TestBase {
 	@Test(priority = 1)
 	void getTitleOfThePage() {
 
+	
+		try {
+			Thread.sleep(30000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		String titleOfThePage = backUpPlan.getTitleOfThePage();
 		System.out.println(titleOfThePage);
 
