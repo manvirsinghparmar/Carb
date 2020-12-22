@@ -6,12 +6,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Cleaning Workspace...'
-                bat "mvn clean"
+                echo " Branch Name: ${params.branch}"
+                bat "mvn clean -X"
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
+                bat "mvn test -X"
             }
         }
         stage('Deploy') {
