@@ -6,7 +6,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Cleaning Workspace...'
-                echo "PATH=${PATH}"
                 echo 'Branch Name: ${params.branch}'
                 bat "mvn help:effective-settings help:effective-pom -U clean -X"
             }
@@ -27,9 +26,7 @@ pipeline {
             always {
                 "Build Completed. Current Build Result= ${currentBuild.currentResult}"
 
-                                                }
-
-            
+                                                }           
         }
 
     }
