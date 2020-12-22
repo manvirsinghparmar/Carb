@@ -25,10 +25,5 @@ pipeline {
        
 
     }
-     post{
-            always {
-                "Build Completed. Current Build Result= ${currentBuild.currentResult}"
-
-                                                }           
-        }
+     
 }
