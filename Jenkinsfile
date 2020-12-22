@@ -22,12 +22,13 @@ pipeline {
                 bat "mvn help:effective-settings help:effective-pom install -X"
             }
         }
-        post{
+       
+
+    }
+     post{
             always {
                 "Build Completed. Current Build Result= ${currentBuild.currentResult}"
 
                                                 }           
         }
-
-    }
 }
