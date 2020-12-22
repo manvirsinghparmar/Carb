@@ -7,7 +7,7 @@ pipeline {
             steps {
                 echo 'Cleaning Workspace...'
                 echo " Branch Name: ${params.branch}"
-                bat "mvn clean -X"
+                bat "mvn help:effective-settings help:effective-pom -U clean -X"
             }
         }
         stage('Test') {
@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                bat "mvn install -X"
+                bat "mvn help:effective-settings help:effective-pom deploy -X"
             }
         }
     }
