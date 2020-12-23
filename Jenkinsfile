@@ -3,7 +3,7 @@ pipeline {
     label 'master'}
 
     stages {
-        stage('Clean') {
+        stage('Build') {
             steps {
                 echo 'Cleaning Workspace...'
                 echo 'Branch Name: ${params.branch}'
@@ -30,7 +30,7 @@ pipeline {
                 bat "mvn Test -X"
             }
         }
-        stage('install'){
+        stage('Install'){
         
         steps{
             
