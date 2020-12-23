@@ -3,27 +3,42 @@ pipeline {
     label 'master'}
 
     stages {
-        stage('Build') {
+        stage('Clean') {
             steps {
                 echo 'Cleaning Workspace...'
                 echo 'Branch Name: ${params.branch}'
-                bat "mvn help:effective-settings help:effective-pom -U clean -X"
+                bat "mvn Clean -X"
+            }
+        }   
+         stage('Verify'){
+        steps{
+        
+        echo 'Verify Work Space'
+        bat 'mvn Verify -X'
+        
+            }
+        }          
+        stage('Compile') {
+            steps {
+                echo 'Compile.....'
+                bat "mvn Compile -X"
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
-                bat "mvn test -X"
+                echo 'Test....'
+                bat "mvn Test -X"
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-                bat "mvn help:effective-settings help:effective-pom install -X"
-            }
+        stage('install'){
+        
+        steps{
+            
+            echo 'install'
+            bat "mvn install -X"
         }
-       
 
+            }   
+       
     }
-     
 }
