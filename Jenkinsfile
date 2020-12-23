@@ -7,7 +7,7 @@ pipeline {
             steps {
                 echo 'Cleaning Workspace...'
                 echo 'Branch Name: ${params.branch}'
-                bat "mvn clean -X"
+                bat "mvn clean -U -X"
             }
         }   
          stage('Verify'){
@@ -21,7 +21,7 @@ pipeline {
         stage('Compile') {
             steps {
                 echo 'Compile.....'
-                bat "mvn compile -X"
+                bat "mvn compile -U -X"
             }
         }
         stage('Test') {
@@ -35,7 +35,7 @@ pipeline {
         steps{
             
             echo 'install'
-            bat "mvn install -X"
+            bat "mvn install -Dmaven.test.failure.ignore=true -X"
         }
 
             }   
