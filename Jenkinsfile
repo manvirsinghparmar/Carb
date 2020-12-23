@@ -14,7 +14,7 @@ pipeline {
         steps{
         
         echo 'Verify Work Space'
-        bat 'mvn verify -X'
+        bat "mvn verify -Dmaven.test.failure.ignore=true -X"
         
             }
         }          
