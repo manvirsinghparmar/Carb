@@ -7,27 +7,27 @@ pipeline {
             steps {
                 echo 'Cleaning Workspace...'
                 echo 'Branch Name: ${params.branch}'
-                bat "mvn Clean -X"
+                bat "mvn clean -X"
             }
         }   
          stage('Verify'){
         steps{
         
         echo 'Verify Work Space'
-        bat 'mvn Verify -X'
+        bat 'mvn verify -X'
         
             }
         }          
         stage('Compile') {
             steps {
                 echo 'Compile.....'
-                bat "mvn Compile -X"
+                bat "mvn compile -X"
             }
         }
         stage('Test') {
             steps {
                 echo 'Test....'
-                bat "mvn Test -X"
+                bat "mvn test -X"
             }
         }
         stage('Install'){
