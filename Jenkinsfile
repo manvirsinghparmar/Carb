@@ -8,7 +8,7 @@ pipeline {
             echo "BUILD_NUMBER=${env.BUILD_NUMBER}"
             echo "BRANCH_NAME=${env.BRANCH_NAME}"
                 echo 'Cleaning Workspace...'
-                echo 'Branch Name: ${params.branch}'
+                echo "Branch Name: ${params.branch}"
                 bat "mvn clean -U -X"
             }
         }   
