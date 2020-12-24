@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+            echo "BUILD_NUMBER=${env.BUILD_NUMBER}"
                 echo 'Cleaning Workspace...'
                 echo 'Branch Name: ${params.branch}'
                 bat "mvn clean -U -X"
