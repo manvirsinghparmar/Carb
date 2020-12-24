@@ -41,4 +41,12 @@ pipeline {
             }   
        
     }
-}
+    post{
+        always{
+            echo "Build Completed. Current Build Result=${currentBuild.currentResult}"
+                                          }
+        }
+
+    }
+
+
