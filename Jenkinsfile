@@ -58,7 +58,7 @@ pipeline {
 
 
         }
-        }
+        
         def sendNotification(buildChanged){
             if (currentBuild.currentResult== 'SUCCESS') {       
             script {
@@ -84,7 +84,7 @@ pipeline {
 
                 }
             }
-
+}
         
 
 
