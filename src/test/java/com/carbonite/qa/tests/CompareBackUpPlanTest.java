@@ -1,5 +1,8 @@
 package com.carbonite.qa.tests;
 
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,6 +16,7 @@ public class CompareBackUpPlanTest extends TestBase {
 
 	SignUpPage signUpPage;
 	CompareBackUpPlanPage backUpPlan;
+	WebDriverWait wait;
 
 	@BeforeMethod
 	void setUp() {
@@ -23,6 +27,7 @@ public class CompareBackUpPlanTest extends TestBase {
 
 		backUpPlan = signUpPage.ClickOnCompareBackUpPlanPage();
 
+		wait=new WebDriverWait(driver, 15);
 	}
 
 	// Verify the title of the page upon navigation
@@ -30,13 +35,10 @@ public class CompareBackUpPlanTest extends TestBase {
 	void getTitleOfThePage() {
 
 	
-		try {
-			Thread.sleep(30000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		wait.until(ExpectedConditions.visibilityOf(backUpPlan.buynow));
+		
 		String titleOfThePage = backUpPlan.getTitleOfThePage();
+		
 		System.out.println(titleOfThePage);
 
 		Assert.assertEquals(titleOfThePage, prop.getProperty("Title-CompareBackUpPlan"));

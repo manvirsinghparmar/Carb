@@ -9,7 +9,7 @@ pipeline {
             echo "BRANCH_NAME=${env.BRANCH_NAME}"
                 echo 'Cleaning Workspace...'
                 echo "Branch Name: ${params.branch}"
-                bat "mvn clean -U -X"
+                bat "mvn help:effective-settings help:effective-pom -U clean -X"
             }
         }   
          stage('Verify'){
@@ -29,7 +29,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Test....'
-                bat "mvn test -X"
+                bat "mvn help:effective-settings help:effective-pom test -X"
             }
         }
         stage('Install'){
