@@ -16,7 +16,7 @@ pipeline {
         steps{
         
         echo 'Verify Work Space'
-        bat "mvn verify -Dmaven.test.failure.ignore=true -X"
+        bat "mvn verify -X"
         
             }
         }          
@@ -29,7 +29,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Test....'
-                bat "mvn test -Dmaven.test.failure.ignore=true"
+                bat "mvn test -X"
             }
         }
         stage('Install'){
@@ -57,7 +57,7 @@ pipeline {
                               }
 
 
-        }
+        }}
         
         def sendNotification(buildChanged){
             if (currentBuild.currentResult== 'SUCCESS') {       
@@ -84,7 +84,7 @@ pipeline {
 
                 }
             }
-}
+
         
 
 
