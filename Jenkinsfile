@@ -56,17 +56,14 @@ pipeline {
         }
         def sendNotification(buildChanged){
             if (currentBuild.currentResult== 'SUCCESS') {       
-            script{
-            emailext(to: 'manvir.singh.parmar88@gmail.com',subject: "$JOB_NAME - Build # ${currentBuild.currentResult}!",body:"The build is back to normal.", mimietype:'text/html')
- 
-                                                                                               
+            script {
+            emailext(to: 'manvir.singh.parmar88@gmail.com',subject: "$JOB_NAME - Build # ${currentBuild.currentResult}!",body:"The build is back to normal.", mimietype:'text/html',)                                                                                 
                 }
-
-                }
+				}
                 
                 else  if (currentBuild.currentResult== 'FAILURE') {       
-            script{
-            emailext(to: 'manvir.singh.parmar88@gmail.com',subject: "$JOB_NAME - Build # ${currentBuild.currentResult}!",body:"Something went wrong", mimietype:'text/html')
+            script {
+            emailext(to: 'manvir.singh.parmar88@gmail.com',subject: "$JOB_NAME - Build # ${currentBuild.currentResult}!",body:"Something went wrong", mimietype:'text/html',)
  
                                                                                                
                 }
