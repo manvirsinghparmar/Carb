@@ -51,6 +51,11 @@ pipeline {
                                           changed {
                                               sendNotification(buildChanged: true)
                                           }
+                              
+                              failure{
+                                  sendNotification(buildChanged: true)
+                              }
+
 
         }
         }
