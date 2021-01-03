@@ -1,0 +1,12 @@
+# Compiled class file
+*.class
+# Log file
+*.log
+# Packages Files #
+*.jar
+*.war
+*.zip
+*.ear
+/.metadata
+**/*.exe
+*.png
