@@ -38,13 +38,13 @@ public class ExtentReportListener extends TestListenerAdapter {
 
 		extent.attachReporter(htmlReporter);
 		extent.setSystemInfo("Name of the Host", "localhost");
-		extent.setSystemInfo("Environemnt", "QA");
-		extent.setSystemInfo("Tester Name", "Manvir");
+		extent.setSystemInfo("Environemnt", "Dev");
+		extent.setSystemInfo("Tester Name", "Joyce");
 
-		htmlReporter.config().setDocumentTitle("Carbonite QA Automation Project"); // Title of the report generated
+		htmlReporter.config().setDocumentTitle("ornage HRM QA Automation Project"); // Title of the report generated
 		htmlReporter.config().setReportName("Sign Up Automation Report"); // Name of the report generated
 		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP); // location of the chart in the report
-		htmlReporter.config().setTheme(Theme.STANDARD);
+		htmlReporter.config().setTheme(Theme.DARK);
 	}
 
 	public void onTestSuccess(ITestResult tr) {

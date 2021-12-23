@@ -67,9 +67,11 @@ public class SignUpPageTest extends TestBase {
 
 	// Run data driven testing for filling Sign up form using InValid data from
 	// Excel sheet 
-	@Test(priority = 2, dataProvider = "NegativeSignUpDataFromExcelFile")
+	@Test(priority = 2, enabled = false)
 	public void fillSignUpFormWithNegativeTestData(String email, String ConfirmEmail, String password,
 			String confirmPassword) {
+		
+		email=Utils.generateRandomEmail();
 
 		signUpPage.clickCookieDialogBoxCloseButton();
 

@@ -1,5 +1,6 @@
 package com.carbonite.qa.webpages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -17,8 +18,8 @@ public class AllProductsPage extends TestBase {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//a[contains(text(),'Learn more')]")
-	@CacheLookup
+
+	@FindBy(css="")
 	WebElement learnMoreButton;
 
 	public String getTitleOfThePage() {

@@ -1,5 +1,7 @@
 package com.carbonite.qa.tests;
 
+import static org.testng.Assert.fail;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -26,7 +28,7 @@ public class BuisnessSolutionPageTest extends TestBase {
 	}
 
 	//Verify the title of the page upon navigation
-	@Test(priority = 1)
+	@Test(priority = 1,enabled = false)
 	void getTitleOfThePage() {
 
 		String titleOfThePage = business.getTitleOfThePage();

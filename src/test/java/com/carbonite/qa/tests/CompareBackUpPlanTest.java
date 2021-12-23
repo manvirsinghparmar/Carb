@@ -31,7 +31,7 @@ public class CompareBackUpPlanTest extends TestBase {
 	}
 
 	// Verify the title of the page upon navigation
-	@Test(priority = 1,enabled = true)
+	@Test(priority = 1,enabled = false)
 	void getTitleOfThePage() {
 
 	
